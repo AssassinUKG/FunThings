@@ -20,7 +20,7 @@ cat file.b64 | base64 -d > file.sh
 cat file.b64 | base64 -d | bash
 ```
 
-Example
+### Example
 
 test.sh
 ```
@@ -37,7 +37,4 @@ heredoc> EOF
 
 cat testing.b64 | base64 -d | bash
 Testing Works
-
-
-
 ```
