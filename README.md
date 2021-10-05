@@ -38,3 +38,11 @@ heredoc> EOF
 cat testing.b64 | base64 -d | bash
 Testing Works
 ```
+
+
+## Crunch
+
+```
+crunch 8 8 -t k1ll0r@@ --stdout
+crunch 8 8 -t k1ll0r@@ -f charset.lst mixalpha-numeric
+```
