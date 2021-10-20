@@ -1,6 +1,14 @@
 # FunThings
 Funthings
 
+## SUID 
+
+```
+find / -type f -perm -04000 -ls 2>/dev/null
+```
+
+
+
 ## Quick transfer shells + encoded (copy and paste to target)
 
 Easy Binary or file transfer
