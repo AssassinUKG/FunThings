@@ -8,6 +8,12 @@ find / -type f -perm -04000 -ls 2>/dev/null
 ```
 
 
+## Get response (bash) 
+
+```
+echo -n "Enter a Username: " && head -1 </dev/s| tr -d "\n"
+```
+
 
 ## Quick transfer shells + encoded (copy and paste to target)
 
