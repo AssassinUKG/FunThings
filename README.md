@@ -91,3 +91,7 @@ ffuf -u http://10.10.11.135/image.php?WW1=WW2 -w /usr/share/seclists/Discovery/W
 ```
 ffuf -u http://10.10.11.135/image.php?img=FUZZ -w /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt   -i -ic -mc all  -t 80  -c -fc 404,403,301
 ```
+
+![image](https://user-images.githubusercontent.com/5285547/149621994-1c2b5e52-a5a6-47e3-8970-ab70f7ee42d1.png)
+
+
