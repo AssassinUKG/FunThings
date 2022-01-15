@@ -95,11 +95,18 @@ ffuf -u http://10.10.11.135/image.php?img=FUZZ -w /usr/share/seclists/Fuzzing/LF
 ![image](https://user-images.githubusercontent.com/5285547/149621994-1c2b5e52-a5a6-47e3-8970-ab70f7ee42d1.png)
 
 
-### php md5 sum date every second
+## pPHP md5 sum date every second
 
 php -a
 
 ```
 while (true){echo date("D M j G:i:s T Y"); echo " = " ; echo md5('$file_hash' .
 time());echo "\n";sleep(1);}
+```
+
+## Python FTP server
+
+```
+pip3 install pyftpdlib
+python3 -m pyftpdlib -p 21
 ```
