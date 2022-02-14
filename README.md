@@ -1,6 +1,24 @@
 # FunThings
 Funthings
 
+## STTY upgrade
+
+```
+python3 -c 'import pty;pty.spawn("/bin/bash");'
+stty rows 40 cols 190
+export SHELL=bash
+export TERM=xterm
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+export PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\$\[\033[00m\] '
+press CTRL+Z
+stty raw -echo
+fg
+ENTER
+ENTER
+```
+
 ## SUID 
 
 ```
