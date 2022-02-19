@@ -112,6 +112,12 @@ ffuf -u http://10.10.11.135/image.php?img=FUZZ -w /usr/share/seclists/Fuzzing/LF
 
 ![image](https://user-images.githubusercontent.com/5285547/149621994-1c2b5e52-a5a6-47e3-8970-ab70f7ee42d1.png)
 
+### Exts
+
+```
+ffuf -u http://test.academy.htb:32583/FUZZ -w ~/Desktop/Useful\ Repos/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt  -mc all -fc 404 -c -ic -e .php,.html,.txt,.htm,.aspx,.asp,.js,.css,.pgsql.txt,.mysql.txt,.pdf,.cgi,.inc,.gif,.jpg,.swf,.xml,.cfm,.xhtml,.wmv,.zip,.axd,.gz,.png,.doc,.shtml,.jsp,.ico,.exe,.csi,.inc.php,.config,.jpeg,.ashx,.log,.xls,.0,.old,.mp3,.com,.tar,.ini,.asa,.tgz,.PDF,.flv,.php3,.bak,.rar,.asmx,.xlsx,.page,.phtml,.dll,.JPG,.asax,.1,.msg,.pl,.GIF,.ZIP,.csv,.css.aspx,.2,.JPEG,.3,.ppt,.nsf,.Pdf,.Gif,.bmp,.sql,.Jpeg,.Jpg,.xml.gz,.Zip,.new,.avi,.psd,.rss,.5,.wav,.action,.db,.dat,.do,.xsl,.class,.mdb,.include,.12,.cs,.class.php,.htc,.mov,.tpl,.4,.6.12,.9,.js.php,.mysql-connect,.mpg,.rdf,.rtf
+```
+
 
 ## PHP md5 sum date every second
 
