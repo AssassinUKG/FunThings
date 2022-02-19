@@ -109,6 +109,12 @@ POST
 ffuf -w wordlist.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
 ```
 
+### Recursive Fuzz
+
+```
+ffuf -w wordlist.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
+```
+
 ### Value Fuzzing 
 
 ```
