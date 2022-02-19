@@ -97,6 +97,23 @@ ffuf -u "http://34.94.3.143/7b4c1c34db/secure-login/"  -d "username=access&passw
 ffuf -u http://10.10.11.135/FUZZ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt   -i -ic -mc all  -t 80 -fc 404,403 -e .php,.html,.txt -c
 ```
 
+### Paramater FUZZ
+
+GET
+```
+ffuf -w wordlist.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php?FUZZ=key -fs xxx
+```
+
+POST
+```
+ffuf -w wordlist.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
+```
+
+### Value Fuzzing 
+
+```
+ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
+```
 
 ### LFI FUZZ
 
@@ -112,7 +129,11 @@ ffuf -u http://10.10.11.135/image.php?img=FUZZ -w /usr/share/seclists/Fuzzing/LF
 
 ![image](https://user-images.githubusercontent.com/5285547/149621994-1c2b5e52-a5a6-47e3-8970-ab70f7ee42d1.png)
 
-### Exts
+### Exts Fuzzing
+
+```
+ffuf -w wordlist.txt:FUZZ -u http://SERVER_IP:PORT/indexFUZZ
+```
 
 ```
 ffuf -u http://test.academy.htb:32583/FUZZ -w ~/Desktop/Useful\ Repos/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt  -mc all -fc 404 -c -ic -e .php,.html,.txt,.htm,.aspx,.asp,.js,.css,.pgsql.txt,.mysql.txt,.pdf,.cgi,.inc,.gif,.jpg,.swf,.xml,.cfm,.xhtml,.wmv,.zip,.axd,.gz,.png,.doc,.shtml,.jsp,.ico,.exe,.csi,.inc.php,.config,.jpeg,.ashx,.log,.xls,.0,.old,.mp3,.com,.tar,.ini,.asa,.tgz,.PDF,.flv,.php3,.bak,.rar,.asmx,.xlsx,.page,.phtml,.dll,.JPG,.asax,.1,.msg,.pl,.GIF,.ZIP,.csv,.css.aspx,.2,.JPEG,.3,.ppt,.nsf,.Pdf,.Gif,.bmp,.sql,.Jpeg,.Jpg,.xml.gz,.Zip,.new,.avi,.psd,.rss,.5,.wav,.action,.db,.dat,.do,.xsl,.class,.mdb,.include,.12,.cs,.class.php,.htc,.mov,.tpl,.4,.6.12,.9,.js.php,.mysql-connect,.mpg,.rdf,.rtf
