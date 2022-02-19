@@ -139,6 +139,14 @@ ffuf -w wordlist.txt:FUZZ -u http://SERVER_IP:PORT/indexFUZZ
 ffuf -u http://test.academy.htb:32583/FUZZ -w ~/Desktop/Useful\ Repos/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt  -mc all -fc 404 -c -ic -e .php,.html,.txt,.htm,.aspx,.asp,.js,.css,.pgsql.txt,.mysql.txt,.pdf,.cgi,.inc,.gif,.jpg,.swf,.xml,.cfm,.xhtml,.wmv,.zip,.axd,.gz,.png,.doc,.shtml,.jsp,.ico,.exe,.csi,.inc.php,.config,.jpeg,.ashx,.log,.xls,.0,.old,.mp3,.com,.tar,.ini,.asa,.tgz,.PDF,.flv,.php3,.bak,.rar,.asmx,.xlsx,.page,.phtml,.dll,.JPG,.asax,.1,.msg,.pl,.GIF,.ZIP,.csv,.css.aspx,.2,.JPEG,.3,.ppt,.nsf,.Pdf,.Gif,.bmp,.sql,.Jpeg,.Jpg,.xml.gz,.Zip,.new,.avi,.psd,.rss,.5,.wav,.action,.db,.dat,.do,.xsl,.class,.mdb,.include,.12,.cs,.class.php,.htc,.mov,.tpl,.4,.6.12,.9,.js.php,.mysql-connect,.mpg,.rdf,.rtf
 ```
 
+## Wordlists 
+
+| Command | Description |
+| ------- | ----------- |
+|/opt/useful/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt |	Directory/Page Wordlist|
+|/opt/useful/SecLists/Discovery/Web-Content/web-extensions.txt	| Extensions Wordlist |
+|/opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt |	Domain Wordlist |
+|/opt/useful/SecLists/Discovery/Web-Content/burp-parameter-names.txt	|Parameters Wordlist|
 
 ## PHP md5 sum date every second
 
