@@ -109,6 +109,12 @@ POST
 ffuf -w wordlist.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
 ```
 
+Idor
+
+```
+seq -w 0 9999 | ffuf -w - -u http://10.10.136.221:8080/dubug/logsFUZZ
+```
+
 ### Recursive Fuzz
 
 ```
