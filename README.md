@@ -97,6 +97,12 @@ ffuf -u "http://34.94.3.143/7b4c1c34db/secure-login/"  -d "username=access&passw
 ffuf -u http://10.10.11.135/FUZZ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt   -i -ic -mc all  -t 80 -fc 404,403 -e .php,.html,.txt -c
 ```
 
+### vhost
+
+```
+ffuf -w /path/to/vhost/wordlist -u https://target -H "Host: FUZZ" -fs 4242
+```
+
 ### Paramater FUZZ
 
 GET
