@@ -205,3 +205,11 @@ Decode
 ```
 cat codedfile | base64 -d | gunzip > file
 ```
+---
+
+# Domain to IP
+
+```
+for i in $(cat fileofDomains.txt); do res=$(nslookup $i | awk '/^Address: / { print $2 }'
+); if [[ ! -z "$res" ]]; then echo "$i:$res"; fi done
+```
