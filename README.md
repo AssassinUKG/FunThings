@@ -213,3 +213,10 @@ cat codedfile | base64 -d | gunzip > file
 for i in $(cat fileofDomains.txt); do res=$(nslookup $i | awk '/^Address: / { print $2 }'
 ); if [[ ! -z "$res" ]]; then echo "$i:$res"; fi done
 ```
+
+
+## Metasploit install 
+
+```
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+```
