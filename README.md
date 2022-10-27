@@ -1,6 +1,12 @@
 # FunThings
 Funthings
 
+## Fix VPN configs
+
+```
+tls-cipher DEFAULT:@SECLEVEL=0
+```
+
 ## STTY upgrade
 
 ```
