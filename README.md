@@ -1,6 +1,4 @@
-# FunThings
-Funthings
-
+# Random things.. 
 
 # Reverse Shells
 
