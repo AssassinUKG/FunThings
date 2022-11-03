@@ -222,17 +222,10 @@ $ deactivate
 
 ## Gzip a file with base64 (data extract)
 
-Encode
+|Encode|Decode|
+|------|------|
+| cat file \| gzip \| base64 -w0 > codedfile | cat codedfile \| base64 -d \| gunzip > file |
 
-```
-cat file | gzip | base64 -w0 > codedfile
-```
-
-Decode
-
-```
-cat codedfile | base64 -d | gunzip > file
-```
 ---
 
 # Domain to IP
