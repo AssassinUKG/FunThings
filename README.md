@@ -250,18 +250,30 @@ tls-cipher DEFAULT:@SECLEVEL=0
 ```
 
 
-## Scrap all a tags on owasp page for cwe mitre links to issues print to clipboard a markdown style tag
+## Scrap all a tags on owasp page for cwe mitre links to issues print to clipboard a markdown style tag (add a button to the page to copy)
 ```js
-const links = document.getElementsByTagName('a');
-let output = '';
-for (let i = 0; i < links.length; i++) {
-    const link = links[i];
-    if (link.href.includes('cwe.mitre')) {
-        output += `[${link.innerHTML}](${link.href})\n`;
-    }
-}
+// Create the button element
+const button = document.createElement('button');
+button.innerHTML = 'Copy links';
+button.id = "copy-button"
+button.style = "position: fixed; bottom: 20px; right: 20px;background-color: #4CAF50;border: 1px solid rgba(27, 31, 35, .15); border-radius: 6px; box-shadow: rgba(27, 31, 35, .1) 0 1px 0; box-sizing: border-box; color: #fff; cursor: pointer;font-family: -apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'; font-size: 14px;padding: 6px 16px; text-align: center; text-decoration: none; user-select: none; "
 
-navigator.clipboard.writeText(output);
-console.log('output copied to clipboard');
+
+// Add the button to the page
+document.body.appendChild(button);
+
+// Attach an event listener to the button
+button.addEventListener('click', function() {
+    const links = document.getElementsByTagName('a');
+    let output = '';
+    for (let i = 0; i < links.length; i++) {
+        const link = links[i];
+        if (link.href.includes('cwe.mitre')) {
+            output += `[${link.innerHTML}](${link.href})\n`;
+        }
+    }
+    navigator.clipboard.writeText(output);
+    console.log('output copied to clipboard');
+});
 ```
 
