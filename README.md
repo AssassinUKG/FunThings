@@ -250,3 +250,18 @@ tls-cipher DEFAULT:@SECLEVEL=0
 ```
 
 
+## Scrap all a tags on owasp page for cwe mitre links to issues print to clipboard a markdown style tag
+```js
+const links = document.getElementsByTagName('a');
+let output = '';
+for (let i = 0; i < links.length; i++) {
+    const link = links[i];
+    if (link.href.includes('cwe.mitre')) {
+        output += `[${link.innerHTML}](${link.href})\n`;
+    }
+}
+
+navigator.clipboard.writeText(output);
+console.log('output copied to clipboard');
+```
+
