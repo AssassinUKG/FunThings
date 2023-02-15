@@ -1,5 +1,17 @@
 # Random things.. 
 
+## 
+
+HTML open flie
+```
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+```
+
+
 # Reverse Shells
 
 ## STTY upgrade
